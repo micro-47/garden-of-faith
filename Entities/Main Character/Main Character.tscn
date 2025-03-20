@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://doxeqs08rkrou"]
-
-[ext_resource type="Texture2D" uid="uid://gao2o736b6h1" path="res://icon.svg" id="1_ls6ej"]
+[gd_scene load_steps=3 format=3 uid="uid://doxeqs08rkrou"]
 
 [sub_resource type="GDScript" id="GDScript_tjdwi"]
 resource_name = "panning"
@@ -40,8 +38,3 @@ zoom = Vector2(1.5, 1.5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(32, 16)
 shape = SubResource("RectangleShape2D_t4yt0")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_ls6ej")

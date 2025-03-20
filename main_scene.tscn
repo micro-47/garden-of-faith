@@ -1,14 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://co1vat2ysuwko"]
+[gd_scene load_steps=3 format=4 uid="uid://co1vat2ysuwko"]
 
-[ext_resource type="PackedScene" uid="uid://b4kj2xbymw3km" path="res://Entities/Villager/villager.tscn" id="1_thdvd"]
-[ext_resource type="Texture2D" uid="uid://gao2o736b6h1" path="res://icon.svg" id="2_m78eh"]
 [ext_resource type="PackedScene" uid="uid://doxeqs08rkrou" path="res://Entities/Main Character/Main Character.tscn" id="2_wm7kg"]
 [ext_resource type="TileSet" uid="uid://dy7opk2xs44te" path="res://Assets/WorldTileset.tres" id="3_b7tmo"]
 
 [node name="World" type="Node2D"]
-
-[node name="Villager" parent="." instance=ExtResource("1_thdvd")]
-position = Vector2(559, 284)
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_wm7kg")]
 position = Vector2(648, 296)
@@ -27,7 +22,3 @@ collision_visibility_mode = 1
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAXAA4ABgADAAUAAAAYAA8ABgACAAUAAAAYAA0ABgAFAAUAAAAZAA4ABgABAAUAAAAXAA8ABgAHAAcAAAA=")
 tile_set = ExtResource("3_b7tmo")
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(438, 403)
-texture = ExtResource("2_m78eh")
