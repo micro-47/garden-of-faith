@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4kj2xbymw3km"]
 
-[ext_resource type="Script" path="res://villager.gd" id="1_rymuv"]
+[ext_resource type="Script" path="res://Entities/Villager/villager.gd" id="1_rymuv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8v2jx"]
 size = Vector2(20, 40)
