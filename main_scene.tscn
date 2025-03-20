@@ -1,225 +1,33 @@
-[gd_scene load_steps=8 format=3 uid="uid://co1vat2ysuwko"]
+[gd_scene load_steps=5 format=4 uid="uid://co1vat2ysuwko"]
 
 [ext_resource type="PackedScene" uid="uid://b4kj2xbymw3km" path="res://Entities/Villager/villager.tscn" id="1_thdvd"]
+[ext_resource type="Texture2D" uid="uid://gao2o736b6h1" path="res://icon.svg" id="2_m78eh"]
 [ext_resource type="PackedScene" uid="uid://doxeqs08rkrou" path="res://Entities/Main Character/Main Character.tscn" id="2_wm7kg"]
-[ext_resource type="Texture2D" uid="uid://cyc17v6dp8f2x" path="res://Assets/fantasy_ [version 2.0]/forest_/forest_.png" id="3_nln30"]
-[ext_resource type="Texture2D" uid="uid://bnl6lpot6whva" path="res://Assets/fantasy_ [version 2.0]/forest_/forest_ [resources].png" id="4_g07dt"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nybb5"]
-texture = ExtResource("3_nln30")
-2:4/0 = 0
-2:3/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-16:6/0 = 0
-17:6/0 = 0
-17:7/0 = 0
-18:7/0 = 0
-19:7/0 = 0
-20:6/0 = 0
-20:5/0 = 0
-19:3/0 = 0
-18:3/0 = 0
-17:2/0 = 0
-16:2/0 = 0
-11:2/0 = 0
-10:2/0 = 0
-16:1/0 = 0
-17:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-1:1/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-1:3/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:3/0 = 0
-4:3/0 = 0
-3:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-4:4/0 = 0
-3:4/0 = 0
-1:4/0 = 0
-20:2/0 = 0
-19:2/0 = 0
-18:2/0 = 0
-20:1/0 = 0
-20:3/0 = 0
-19:5/0 = 0
-18:5/0 = 0
-17:5/0 = 0
-16:5/0 = 0
-11:4/0 = 0
-10:4/0 = 0
-13:5/0 = 0
-12:5/0 = 0
-11:5/0 = 0
-10:5/0 = 0
-9:5/0 = 0
-8:5/0 = 0
-7:5/0 = 0
-6:5/0 = 0
-5:5/0 = 0
-4:5/0 = 0
-3:5/0 = 0
-2:5/0 = 0
-1:5/0 = 0
-9:4/0 = 0
-8:4/0 = 0
-7:4/0 = 0
-6:4/0 = 0
-5:4/0 = 0
-8:3/0 = 0
-4:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-11:7/0 = 0
-7:6/0 = 0
-6:6/0 = 0
-5:6/0 = 0
-4:6/0 = 0
-3:6/0 = 0
-2:6/0 = 0
-1:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-16:7/0 = 0
-14:7/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-19:6/0 = 0
-18:6/0 = 0
-19:1/0 = 0
-18:1/0 = 0
-17:3/0 = 0
-16:3/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jd280"]
-texture = ExtResource("4_g07dt")
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/next_alternative_id = 2
-5:5/0 = 0
-6:5/next_alternative_id = 2
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/next_alternative_id = 2
-5:6/0 = 0
-6:6/next_alternative_id = 2
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_eaxda"]
-sources/4 = SubResource("TileSetAtlasSource_nybb5")
-sources/6 = SubResource("TileSetAtlasSource_jd280")
+[ext_resource type="TileSet" uid="uid://dy7opk2xs44te" path="res://Assets/WorldTileset.tres" id="3_b7tmo"]
 
 [node name="World" type="Node2D"]
 
 [node name="Villager" parent="." instance=ExtResource("1_thdvd")]
-position = Vector2(559, 295)
+position = Vector2(559, 284)
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_wm7kg")]
-position = Vector2(648, 307)
+position = Vector2(648, 296)
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_eaxda")
+collision_visibility_mode = 1
 format = 2
-layer_0/tile_data = PackedInt32Array(-65536, 131076, 5, -65535, 196612, 5, 1, 196612, 6, 65537, 196612, 6, 0, 131076, 6, 65535, 131076, 6, 131071, 131076, 6, 65536, 131076, 6, 131070, 131076, 6, 65534, 131076, 6, 196606, 131076, 6, 196607, 131076, 6, 131072, 131076, 6, 262143, 131076, 6, 262142, 131076, 6, 196608, 131076, 6, 327679, 131076, 6, 327678, 131076, 6, 131073, 196612, 6, 196609, 196612, 6, 262145, 196612, 7, 393214, 131076, 7, 393215, 131076, 7, 393213, 65540, 7, 65533, 65540, 6, 131069, 65540, 6, 196605, 65540, 6, 262141, 65540, 6, 327677, 65540, 6, -3, 65540, 5, -2, 131076, 5, -1, 131076, 5, 262144, 262148, 5, 327680, 196612, 7)
+
+[node name="Layer1" type="TileMapLayer" parent="TileMap"]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAWAAoABAABAAUAAAAWAAsABAABAAYAAAAWAAwABAABAAYAAAAWAA0ABAABAAYAAAAWAA4ABAABAAYAAAAWAA8ABAABAAYAAAAWABAABAABAAcAAAAXAAoABAACAAUAAAAXAAsABAACAAYAAAAXAAwABAACAAYAAAAXAA0ABAACAAYAAAAXAA4ABAACAAYAAAAXAA8ABAACAAYAAAAXABAABAACAAcAAAAYAAoABAACAAUAAAAYAAsABAACAAYAAAAYAAwABAACAAYAAAAYAA0ABAACAAYAAAAYAA4ABAACAAYAAAAYAA8ABAACAAYAAAAYABAABAACAAcAAAAZAAoABAACAAUAAAAZAAsABAACAAYAAAAZAAwABAACAAYAAAAZAA0ABAACAAYAAAAZAA4ABAACAAYAAAAZAA8ABAAEAAUAAAAZABAABAADAAcAAAAaAAoABAADAAUAAAAaAAsABAADAAYAAAAaAAwABAADAAYAAAAaAA0ABAADAAYAAAAaAA4ABAADAAYAAAAaAA8ABAADAAcAAAAAAB4ABAAEAAcAAAAAAB0ABAAEAAcAAAAAABwABAAEAAcAAAAAABsABAAEAAcAAAAAABoABAAEAAcAAAAAABkABAAEAAcAAAAAABgABAAEAAcAAAAAABcABAAEAAcAAAAAABYABAAEAAcAAAAAABUABAAEAAcAAAAAABQABAAEAAcAAAAAABMABAAEAAcAAAAAABIABAAEAAcAAAAAABEABAAEAAcAAAAAABAABAAEAAcAAAAAAA8ABAAEAAcAAAAAAA4ABAAEAAcAAAAAAA0ABAAEAAcAAAAAAAwABAAEAAcAAAAAAAsABAAEAAcAAAAAAAoABAAEAAcAAAAAAAkABAAEAAcAAAAAAAgABAAEAAcAAAAAAAcABAAEAAcAAAAAAAYABAAEAAcAAAAAAAUABAAEAAcAAAA=")
+tile_set = ExtResource("3_b7tmo")
+collision_visibility_mode = 1
+
+[node name="Layer2" type="TileMapLayer" parent="TileMap"]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAXAA4ABgADAAUAAAAYAA8ABgACAAUAAAAYAA0ABgAFAAUAAAAZAA4ABgABAAUAAAAXAA8ABgAHAAcAAAA=")
+tile_set = ExtResource("3_b7tmo")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(438, 403)
+texture = ExtResource("2_m78eh")
