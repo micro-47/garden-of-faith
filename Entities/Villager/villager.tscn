@@ -16,3 +16,12 @@ offset_bottom = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8v2jx")
+disabled = true
+
+[node name="FoodLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -37.0
+offset_top = -40.0
+offset_right = 38.0
+offset_bottom = -17.0
+text = "Food: 100"
