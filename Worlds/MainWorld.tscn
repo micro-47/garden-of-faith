@@ -153,5 +153,3 @@ tile_set = ExtResource("9_fps5y")
 format = 2
 layer_1/name = "Layer1"
 layer_1/z_index = 1
-
-[node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
