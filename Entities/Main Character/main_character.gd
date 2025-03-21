@@ -64,3 +64,4 @@ func _unhandled_input(event: InputEvent) -> void:
 #func _draw() -> void: # this wasn't being called
 func _process(delta: float) -> void:
 	%FaithLabel.text = "Faith: " + str(faith)
+	%FoodLabel.text = "Food: " + str(int(Villager.food))

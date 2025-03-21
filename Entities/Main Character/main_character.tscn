@@ -66,3 +66,11 @@ unique_name_in_owner = true
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Faith: 0"
+
+[node name="FoodLabel" type="Label" parent="Hud"]
+unique_name_in_owner = true
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 76.0
+offset_bottom = 49.0
+text = "Food: 100"
