@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ds3vjtocf2j3t"]
+
+[ext_resource type="Texture2D" uid="uid://ooyfodit6ds6" path="res://Assets/ArtForTOPDOWN-GaeaTutorial.png" id="1_0ndwy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk04a"]
+texture = ExtResource("1_0ndwy")
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+
+[resource]
+sources/2 = SubResource("TileSetAtlasSource_mk04a")
