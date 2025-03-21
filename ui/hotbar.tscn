@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu4cdel65mk18"]
+
+[ext_resource type="PackedScene" uid="uid://bcae2v80agq17" path="res://ui/building_selector.tscn" id="1_m6uf8"]
+
+[node name="Hotbar" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BuildingSelector" parent="." instance=ExtResource("1_m6uf8")]
+layout_mode = 2
+
+[node name="BuildingSelector2" parent="." instance=ExtResource("1_m6uf8")]
+layout_mode = 2
+text = "Build Temple"

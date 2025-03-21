@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcae2v80agq17"]
+
+[ext_resource type="Script" path="res://ui/building_selector.gd" id="1_or0nu"]
+
+[node name="BuildingSelector" type="Button"]
+anchors_preset = -1
+anchor_right = 0.169
+anchor_bottom = 0.092
+offset_right = -0.320023
+offset_bottom = 0.119995
+text = "Build Farm"
+script = ExtResource("1_or0nu")

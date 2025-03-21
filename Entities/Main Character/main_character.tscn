@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://doxeqs08rkrou"]
+[gd_scene load_steps=5 format=3 uid="uid://doxeqs08rkrou"]
 
-[ext_resource type="Script" path="res://Entities/Main Character/character_body_2d.gd" id="1_r2n8k"]
+[ext_resource type="Script" path="res://Entities/Main Character/character_body_2d.gd" id="1_s0870"]
+[ext_resource type="PackedScene" uid="uid://bcae2v80agq17" path="res://ui/building_selector.tscn" id="2_4vv8i"]
 
 [sub_resource type="GDScript" id="GDScript_aan8a"]
 script/source = "extends Camera2D
@@ -30,7 +31,7 @@ func Zoom():
 [node name="MainCharacter" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_r2n8k")
+script = ExtResource("1_s0870")
 
 [node name="Camera" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(0.5, 0.5)
@@ -39,3 +40,21 @@ script = SubResource("GDScript_aan8a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(128, 64)
 shape = SubResource("RectangleShape2D_in84f")
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="Hotbar" type="HBoxContainer" parent="Hud"]
+unique_name_in_owner = true
+offset_left = 562.0
+offset_top = 506.0
+offset_right = 1185.0
+offset_bottom = 633.0
+
+[node name="BuildingSelector" parent="Hud/Hotbar" instance=ExtResource("2_4vv8i")]
+layout_mode = 2
+building_type = 1
+
+[node name="BuildingSelector2" parent="Hud/Hotbar" instance=ExtResource("2_4vv8i")]
+layout_mode = 2
+text = "Build Temple"
+building_type = 2
