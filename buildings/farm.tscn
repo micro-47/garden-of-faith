@@ -1,10 +1,22 @@
-[gd_scene format=3 uid="uid://p23e8j40t3s6"]
+[gd_scene load_steps=3 format=3 uid="uid://p23e8j40t3s6"]
+
+[ext_resource type="Script" path="res://buildings/building.gd" id="1_20wea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aanmk"]
+size = Vector2(101, 17)
 
 [node name="Farm" type="Node2D" groups=["Buildings", "Farms"]]
+script = ExtResource("1_20wea")
 
-[node name="Label" type="Label" parent="." groups=["Buildings", "Farms"]]
+[node name="Label" type="Label" parent="."]
 offset_left = -50.0
 offset_top = -11.0
 offset_right = 50.0
 offset_bottom = 12.0
 text = "Hi, I am farm"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_aanmk")

@@ -27,6 +27,12 @@ const SPEED: float = 300.0
 @export
 var destination: Vector2 = Vector2.ZERO
 
+var working_building: Building
+
+
+@onready
+var player: MainCharacter = get_node("/root/World/MainCharacter")
+
 
 func _physics_process(delta: float) -> void:
 	match state:
@@ -50,10 +56,23 @@ func _physics_process(delta: float) -> void:
 		VillagerActionStates.IDLE:
 			take_hunger(delta * IDLE_HUNGER)
 			
-			# TODO: look for a job
+			# look for a job (non-full building)
+			for building in get_tree().get_nodes_in_group("Buildings"):
+				if !building.is_building_full():
+					state = VillagerActionStates.WALK
+					destination = building.position
+					
 		VillagerActionStates.WORK:
 			# should only be in this state if there is a building that has this villager as the worker
 			take_hunger(delta * WORK_HUNGER)
+			
+			match working_building.BUILDING_TYPE:
+				MainCharacter.Buildings.FARM:
+					food += delta * 1.
+				MainCharacter.Buildings.TEMPLE:
+					# remember, faith is integer
+					if randf() < delta:
+						player.faith += 1.
 
 
 
@@ -73,3 +92,9 @@ func take_damage(amount: float) -> void:
 
 func _process(delta: float) -> void:
 	%HealthLabel.text = "Health: "+str(int(health))
+
+
+# called by the building that is entered
+func building_entered(building):
+	state = VillagerActionStates.WORK
+	working_building = building

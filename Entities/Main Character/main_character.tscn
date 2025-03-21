@@ -42,6 +42,7 @@ script = SubResource("GDScript_aan8a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(128, 64)
 shape = SubResource("RectangleShape2D_in84f")
+disabled = true
 
 [node name="Hud" type="CanvasLayer" parent="."]
 
