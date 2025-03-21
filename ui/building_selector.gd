@@ -11,9 +11,8 @@ var is_selected: bool = false
 ## when selected is -1, then none is selected. But if 0 then first slot, if 1 then the next, ...
 #static var selected: int = -1
 
-# annoyingly, the main player script is inside the Character's rigidbody.
 @onready
-var player = get_node("/root/World/MainCharacter/CharacterBody2D")
+var player = get_node("/root/World/MainCharacter")
 
 func _ready() -> void:
 	match building_type:
@@ -23,8 +22,7 @@ func _ready() -> void:
 			building_name = "Temple"
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _draw() -> void:
 	# Kinda wasteful, whatever
 	var display_string = "Build "
 	display_string += building_name

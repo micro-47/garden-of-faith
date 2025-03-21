@@ -1,15 +1,5 @@
 extends CharacterBody2D
 
-# used for imports
-class_name MainCharacter
-
-enum Buildings { NONE, FARM, TEMPLE }
-
-# if index is -1, then nothing is selected
-@export
-var selected_building_index: int = -1
-var selected_building: Buildings = Buildings.NONE
-
 
 const SPEED = 1000.0
 
@@ -19,39 +9,3 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("camera_left","camera_right","camera_up","camera_down")
 	velocity = (direction * SPEED )/ mainCam.zoom 
 	move_and_slide()
-
-func building_selector_clicked(index: int) -> void:
-	if selected_building_index==index:
-		# deselect
-		selected_building_index = -1
-	else:
-		selected_building_index = index
-	
-	# Update the is_selected for all the building buttons
-	# redundant but safer
-	for i in range(%Hotbar.get_child_count()):
-		%Hotbar.get_child(i).is_selected = (i==selected_building_index)
-		
-	update_selected_building()
-
-func update_selected_building():
-	if selected_building_index==-1:
-		selected_building = Buildings.NONE
-	else:
-		selected_building = %Hotbar.get_child(selected_building_index).building_type
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		# place building
-		match selected_building:
-			# TODO: abstract this
-			Buildings.FARM:
-				var farm_scene = preload("res://buildings/farm.tscn")
-				var farm_instance = farm_scene.instantiate()
-				farm_instance.global_position = get_global_mouse_position()
-				get_node("/root/World").add_child(farm_instance)
-			Buildings.TEMPLE:
-				var temple_scene = preload("res://buildings/temple.tscn")
-				var temple_instance = temple_scene.instantiate()
-				temple_instance.global_position = get_global_mouse_position()
-				get_node("/root/World").add_child(temple_instance)
