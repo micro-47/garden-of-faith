@@ -9,12 +9,13 @@ var health: float = 10.
 
 
 # finite state machine (https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/)
-enum VillagerActionStates {WALK, IDLE, EAT}
+enum VillagerActionStates {WALK, IDLE, WORK, EAT}
 @export
 var state: VillagerActionStates = VillagerActionStates.IDLE
 
 # too nice?
 const WALK_HUNGER: float = 0.25
+const WORK_HUNGER: float = 0.25
 const IDLE_HUNGER: float = 0.125
 # less than 1 means damage is slower than hunger
 const HUNGER_DAMAGE_FACTOR: float = 0.25
@@ -30,10 +31,12 @@ var destination: Vector2 = Vector2.ZERO
 func _physics_process(delta: float) -> void:
 	match state:
 		VillagerActionStates.WALK:
+			# walking costs food
+			take_hunger(delta * WALK_HUNGER)
+
 			if position.distance_squared_to(destination) < 1:
 				position = destination
 				state = VillagerActionStates.IDLE
-				take_hunger(delta * IDLE_HUNGER)
 				return
 			
 			var direction := position.direction_to(destination)
@@ -42,13 +45,16 @@ func _physics_process(delta: float) -> void:
 			if position.distance_to(destination) < 10:
 				# dampen
 				velocity *= sqrt(position.distance_to(destination) / 10)
-
-			move_and_slide()
 			
-			# walking costs food
-			take_hunger(delta * WALK_HUNGER)
+			move_and_slide()
 		VillagerActionStates.IDLE:
 			take_hunger(delta * IDLE_HUNGER)
+			
+			# TODO: look for a job
+		VillagerActionStates.WORK:
+			# should only be in this state if there is a building that has this villager as the worker
+			take_hunger(delta * WORK_HUNGER)
+
 
 
 # tries to take food, and if the new food is negative, then villager pays with health
