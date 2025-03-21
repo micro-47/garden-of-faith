@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 script = SubResource("GDScript_tjdwi")
 
 [node name="Camera" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(32, 16)
