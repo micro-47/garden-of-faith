@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dv05ujba5f7eo"]
+
+[node name="Temple" type="Node2D"]
+
+[node name="Label" type="Label" parent="." groups=["Buildings", "Temples"]]
+offset_left = -43.0
+offset_top = -12.0
+offset_right = 57.0
+offset_bottom = 11.0
+text = "temple I am"

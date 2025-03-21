@@ -13,7 +13,7 @@ var is_selected: bool = false
 
 # annoyingly, the main player script is inside the Character's rigidbody.
 @onready
-var player = get_node("/root/World/MainCharacter/CharacterBody2D")  
+var player = get_node("/root/World/MainCharacter/CharacterBody2D")
 
 func _ready() -> void:
 	match building_type:

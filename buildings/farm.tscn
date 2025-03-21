@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://p23e8j40t3s6"]
+
+[node name="Farm" type="Node2D" groups=["Buildings", "Farms"]]
+
+[node name="Label" type="Label" parent="." groups=["Buildings", "Farms"]]
+offset_left = -50.0
+offset_top = -11.0
+offset_right = 50.0
+offset_bottom = 12.0
+text = "Hi, I am farm"
