@@ -3,7 +3,7 @@ extends Node2D
 # used for imports
 class_name MainCharacter
 
-enum Buildings { NONE, FARM, TEMPLE }
+enum Buildings { NONE, HOUSE, FARM, TEMPLE }
 
 # if index is -1, then nothing is selected
 @export
@@ -40,6 +40,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		# place building
 		match selected_building:
 			# TODO: abstract this
+			Buildings.HOUSE:
+				if faith-5 < 0:
+					print("Not enough faith for house ("+str(faith)+"/"+str(5)+").")
+				else:
+					var house_scene = preload("res://buildings/house.tscn")
+					var house_instance = house_scene.instantiate()
+					house_instance.global_position = get_global_mouse_position()
+					get_node("/root/World").add_child(house_instance)
+					
+					faith -= 5
 			Buildings.FARM:
 				if faith-3 < 0:
 					print("Not enough faith for farm ("+str(faith)+"/"+str(3)+").")

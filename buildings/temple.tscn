@@ -7,7 +7,7 @@ size = Vector2(101, 17)
 
 [node name="Temple" type="Node2D" groups=["Buildings", "Temples"]]
 script = ExtResource("1_8m2qi")
-BUILDING_TYPE = 2
+BUILDING_TYPE = 3
 
 [node name="Label" type="Label" parent="."]
 offset_left = -43.0

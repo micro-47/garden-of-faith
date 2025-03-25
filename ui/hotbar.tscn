@@ -9,9 +9,16 @@ anchor_bottom = 0.25
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BuildingSelector3" parent="." instance=ExtResource("1_m6uf8")]
+layout_mode = 2
+text = "Build House"
+building_type = 1
+
 [node name="BuildingSelector" parent="." instance=ExtResource("1_m6uf8")]
 layout_mode = 2
+building_type = 2
 
 [node name="BuildingSelector2" parent="." instance=ExtResource("1_m6uf8")]
 layout_mode = 2
 text = "Build Temple"
+building_type = 3

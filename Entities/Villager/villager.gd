@@ -73,6 +73,13 @@ func _physics_process(delta: float) -> void:
 					# remember, faith is integer
 					if randf() < delta:
 						player.faith += 1.
+				MainCharacter.Buildings.HOUSE:
+					if randf() < delta * 0.1:
+						# spawn another villager
+						var villager_scene = preload("res://Entities/Villager/villager.tscn")
+						var villager_instance = villager_scene.instantiate()
+						villager_instance.global_position = self.global_position
+						get_node("/root/World/Villagers").add_child(villager_instance)
 
 
 

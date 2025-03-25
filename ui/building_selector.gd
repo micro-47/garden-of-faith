@@ -16,6 +16,8 @@ var player = get_node("/root/World/MainCharacter")
 
 func _ready() -> void:
 	match building_type:
+		MainCharacter.Buildings.HOUSE:
+			building_name = "House"
 		MainCharacter.Buildings.FARM:
 			building_name = "Farm"
 		MainCharacter.Buildings.TEMPLE:

@@ -53,14 +53,19 @@ offset_top = 506.0
 offset_right = 1185.0
 offset_bottom = 633.0
 
+[node name="BuildingSelector3" parent="Hud/Hotbar" instance=ExtResource("2_4vv8i")]
+layout_mode = 2
+text = "Build House"
+building_type = 1
+
 [node name="BuildingSelector" parent="Hud/Hotbar" instance=ExtResource("2_4vv8i")]
 layout_mode = 2
-building_type = 1
+building_type = 2
 
 [node name="BuildingSelector2" parent="Hud/Hotbar" instance=ExtResource("2_4vv8i")]
 layout_mode = 2
 text = "Build Temple"
-building_type = 2
+building_type = 3
 
 [node name="FaithLabel" type="Label" parent="Hud"]
 unique_name_in_owner = true

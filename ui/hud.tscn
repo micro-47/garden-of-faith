@@ -1,16 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://hxuw8bepalmg"]
 
-[ext_resource type="PackedScene" uid="uid://bcae2v80agq17" path="res://ui/building_selector.tscn" id="1_joewf"]
+[ext_resource type="PackedScene" uid="uid://cu4cdel65mk18" path="res://ui/hotbar.tscn" id="1_x5txw"]
 
 [node name="Hud" type="CanvasLayer"]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="BuildingSelector" parent="HBoxContainer" instance=ExtResource("1_joewf")]
-layout_mode = 2
-
-[node name="BuildingSelector2" parent="HBoxContainer" instance=ExtResource("1_joewf")]
-layout_mode = 2
-text = "Build Temple"
+[node name="Hotbar" parent="." instance=ExtResource("1_x5txw")]
