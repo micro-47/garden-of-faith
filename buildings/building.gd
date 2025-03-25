@@ -16,10 +16,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if is_building_full():
+		return
+
 	# TODO: is allowed to do this every n frames
 	for villager in $Area2D.get_overlapping_bodies():
 		if villager is Villager:
-			villager.building_entered(self)
+			villager.building_job_offer(self)
+			
+			if is_building_full():
+				break
 
 
 func is_building_full() -> bool:

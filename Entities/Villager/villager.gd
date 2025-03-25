@@ -102,6 +102,7 @@ func _process(delta: float) -> void:
 
 
 # called by the building that is entered
-func building_entered(building):
+func building_job_offer(building):
 	state = VillagerActionStates.WORK
 	working_building = building
+	building.workers += 1
