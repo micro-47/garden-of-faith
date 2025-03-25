@@ -22,9 +22,8 @@ func _process(delta: float) -> void:
 func Zoom():
 	if Input.is_action_just_pressed(\"zoom_in\"):
 		zoom = zoom*1.1
-	elif Input.is_action_just_pressed(\"zoom_out\"):
+	elif Input.is_action_just_pressed(\"zoom_out\") and zoom[1] >= 0.25:
 		zoom = zoom*0.9
-	
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in84f"]

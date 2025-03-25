@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cobr2uw1y02m7"]
+[gd_scene load_steps=6 format=3 uid="uid://cobr2uw1y02m7"]
 
 [ext_resource type="PackedScene" uid="uid://doxeqs08rkrou" path="res://Entities/Main Character/main_character.tscn" id="1_dg748"]
 [ext_resource type="Script" path="res://Procedural Generation Addon/generators/2D/noise_generator/noise_generator.gd" id="2_mj7ya"]
 [ext_resource type="Resource" uid="uid://dcwhrj0ff8h4q" path="res://Worlds/test.tres" id="3_dxgun"]
 [ext_resource type="Script" path="res://Procedural Generation Addon/renderers/2D/tilemap_gaea_renderer.gd" id="4_iuvey"]
 [ext_resource type="TileSet" uid="uid://dx72swoale4do" path="res://Assets/ExplorerTileset.tres" id="5_wqkeo"]
-[ext_resource type="PackedScene" uid="uid://b4kj2xbymw3km" path="res://Entities/Villager/villager.tscn" id="6_aour8"]
 
 [node name="TestWorld" type="Node2D"]
 
@@ -28,8 +27,3 @@ tile_set = ExtResource("5_wqkeo")
 format = 2
 layer_1/name = "Layer1"
 layer_1/z_index = 1
-
-[node name="Villagers" type="Node2D" parent="."]
-
-[node name="Villager" parent="Villagers" instance=ExtResource("6_aour8")]
-position = Vector2(2756, 1735)
