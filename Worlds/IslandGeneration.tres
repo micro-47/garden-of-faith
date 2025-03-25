@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NoiseGeneratorSettings" load_steps=20 format=3 uid="uid://cb3hk8jfuux4v"]
+[gd_resource type="Resource" script_class="NoiseGeneratorSettings" load_steps=20 format=3 uid="uid://du3nergifbe5s"]
 
 [ext_resource type="Script" path="res://Procedural Generation Addon/others/falloff_map.gd" id="1_4r740"]
 [ext_resource type="Script" path="res://Procedural Generation Addon/modifiers/2D/modifier_2d.gd" id="2_18hef"]

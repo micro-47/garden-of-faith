@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://doxeqs08rkrou" path="res://Entities/Main Character/main_character.tscn" id="1_5ipdk"]
 [ext_resource type="Script" path="res://Procedural Generation Addon/generators/2D/noise_generator/noise_generator.gd" id="2_83cvk"]
-[ext_resource type="Resource" uid="uid://cb3hk8jfuux4v" path="res://Worlds/IslandGeneration.tres" id="3_env3t"]
+[ext_resource type="Resource" uid="uid://du3nergifbe5s" path="res://Worlds/IslandGeneration.tres" id="3_env3t"]
 [ext_resource type="Script" path="res://Procedural Generation Addon/renderers/2D/tilemap_gaea_renderer.gd" id="6_2dhus"]
 [ext_resource type="TileSet" uid="uid://ds3vjtocf2j3t" path="res://Assets/SimpleTileset.tres" id="9_fps5y"]
 [ext_resource type="PackedScene" uid="uid://b4kj2xbymw3km" path="res://Entities/Villager/villager.tscn" id="10_b3wwq"]
